@@ -1,0 +1,20 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.form-width {
+	max-width: 350px;
+	margin: auto;
+}
+
+h1 {
+	text-align: center;
+	background: #4169E1;
+	border-radius: 5px;	
+	color: white;
+	padding: 5px;
+	margin-bottom: 15px;
+}
+
+.title-table {
+	font-size: 1.5em;	
+}
