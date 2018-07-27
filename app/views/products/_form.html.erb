@@ -13,11 +13,11 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :product_name %>
+    <%= form.label :name, class: "label-one" %>
+    <%= form.text_field :name, id: :product_name, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions">    
+      <%= form.submit :Submit, class: "btn btn-lg btn-default btn-block active" %>
   </div>
 <% end %>
