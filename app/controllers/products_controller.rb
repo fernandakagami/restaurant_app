@@ -14,9 +14,8 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-      if @product.save
-        flash[:sucess] = 'Product was successfully created.'
-        redirect_to root_url        
+      if @product.save        
+        redirect_to products_path
       else
         render :new        
       end    
@@ -24,8 +23,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      flash[:sucess] = 'Product was successfully updated.'
-      redirect_to root_url        
+      redirect_to products_path       
     else
       render :edit
     end
@@ -33,9 +31,8 @@ class ProductsController < ApplicationController
 
  
   def destroy
-    @product.destroy
-    flash[:sucess] = 'Product was successfully destroyed.'
-    redirect_to root_url
+    @product.destroy    
+    redirect_to products_path, notice: 'Order was successfully destroyed.'
   end
 
   private

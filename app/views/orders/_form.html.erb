@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :table %>
-    <%= form.text_field :table, id: :order_table %>
+    <%= form.label :table, class: "label-one" %>
+    <%= form.text_field :table, id: :order_table, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :quantity %>
-    <%= form.number_field :quantity, id: :order_quantity %>
+    <%= form.label :product_id, class: "label-one" %>
+    <%= form.collection_select(:product_id, @product_options_for_select, :id, :name, {}, {class: "form-control"}) %>    
   </div>
 
   <div class="field">
-    <%= form.label :product_id %>
-    <%= form.text_field :product_id, id: :order_product_id %>
+    <%= form.label :quantity, class: "label-one" %>
+    <%= form.number_field :quantity, id: :order_quantity, class: "form-control" %>
   </div>
 
   <div class="actions">
