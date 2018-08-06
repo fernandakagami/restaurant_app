@@ -6,9 +6,6 @@ class OrdersController < ApplicationController
     @orders = Order.all
   end
 
-  def show
-  end
-
   def new
     @order = Order.new
   end
@@ -20,19 +17,17 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
 
     if @order.save
-      redirect_to @order
+      redirect_to orders_path
     else
       render :new
     end    
   end
 
   def update
-    respond_to do |format|
-      if @order.update(order_params)
-        redirect_to @order
-      else
-        render :edit
-      end
+    if @order.update(order_params)
+      redirect_to orders_path
+    else
+      render :edit
     end
   end
 

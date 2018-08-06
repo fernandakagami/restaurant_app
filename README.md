@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sistema para pedir lanches. 
+Faça uma aplicação web que possua duas páginas.
+A primeira serve para o garçom pedir um lanche.
+A segunda página serve para a empresa visualizar os pedidos.
 
-Things you may want to cover:
+O garçom deve informar a mesa, o lanche e a quantidade. O lanche deve ser um campo de seleção, que traz os lanches cadastrados no banco de dados.
 
-* Ruby version
+Listar todos os pedidos, com mesa, lanche e quantidade.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+O usuário da cozinha pode cadastrar os lanches disponíveis.
