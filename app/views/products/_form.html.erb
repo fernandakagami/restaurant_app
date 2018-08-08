@@ -1,17 +1,5 @@
 <%= form_with(model: product, local: true) do |form| %>
-  <% if @product.errors.any? %>
-    <div id="error_explanation">
-      <div class="alert alert-danger">
-        <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
-        <ul>
-        <% @product.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
-    </div>
-  <% end %>
-
+  
   <div class="field">
     <%= form.label :name, class: "label-one" %>
     <%= form.text_field :name, id: :product_name, class: "form-control" %>
@@ -20,4 +8,18 @@
   <div class="actions">    
       <%= form.submit :Submit, class: "btn btn-lg btn-default btn-block active" %>
   </div>
+
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-danger">
+        The form contains <%= pluralize(@product.errors.count, "error") %>.
+      </div>
+      <ul>
+      <% @product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>      
+    </div>
+  <% end %>
+
 <% end %>
